@@ -1,0 +1,13 @@
+[Unit]
+Description=HDD LED
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/hddledPi -p 26
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

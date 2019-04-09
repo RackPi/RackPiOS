@@ -1,0 +1,13 @@
+[Unit]
+Description=Network LED
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/netledPi -p 27
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
