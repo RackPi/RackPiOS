@@ -43,6 +43,7 @@ systemctl enable rackpipower.service
 
 cd ..
 rm -rf temp_rackpi
+rm install.sh
 
 echo "dtoverlay=act_led_trigger=heartbeat" >> /boot/config.txt
 echo "dtoverlay=pi3-act-led,gpio=26" >> /boot/config.txt
