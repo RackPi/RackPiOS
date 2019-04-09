@@ -14,8 +14,8 @@ from subprocess import call
 # Connect button and LED for boot/shutdown activity on GPIO3
 button = Button(3)
 
-# Connect a short-circuit between GPIO 24 and 3V (e.g. pin 17+18)
-jumper = DigitalInputDevice(24)
+# Connect a short-circuit between GPIO 22 and 3V (e.g. pin 15+17)
+jumper = DigitalInputDevice(22)
 
 def shutdown():
     call("sudo shutdown -h now", shell=True)
