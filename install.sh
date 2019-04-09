@@ -25,7 +25,7 @@ chmod +x /usr/local/bin/RackPiPower.py
 
 wget https://github.com/RackPi/PiLEDlights/releases/download/v1.0/PiLEDlights_v1.0.tar.gz
 tar xvfz PiLEDlights_v1.0.tar.gz
-cd PiLEDlights_v1.0
+cd PiLEDlights
 cp * /usr/local/bin/
 chmod +x /usr/local/bin/actledPi
 chmod +x /usr/local/bin/hddledPi
@@ -43,4 +43,7 @@ systemctl enable rackpipower.service
 
 cd ..
 rm -rf temp_rackpi
+
+echo "dtoverlay=act_led_trigger=heartbeat"
+echo "dtoverlay=pi3-act-led,gpio=26"
 reboot now
