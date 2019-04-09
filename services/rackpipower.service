@@ -1,11 +1,9 @@
 [Unit]
-Description=HDD LED
+Description=RackPi Power Driver
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/hddledPi -p 26
-StandardOutput=inherit
-StandardError=inherit
+ExecStart=/usr/bin/python /usr/local/bin/RackPiPower.py
 Restart=on-abort
 KillMode=process
 
